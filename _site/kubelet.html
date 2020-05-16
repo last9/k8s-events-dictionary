@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Kubelet Events | Kubernetes Events Dictionary</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Kubelet Events" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="[“A short description of your site’s purpose”]" />
+<meta property="og:description" content="[“A short description of your site’s purpose”]" />
+<link rel="canonical" href="http://localhost:4000/kubelet.html" />
+<meta property="og:url" content="http://localhost:4000/kubelet.html" />
+<meta property="og:site_name" content="Kubernetes Events Dictionary" />
+<script type="application/ld+json">
+{"description":"[“A short description of your site’s purpose”]","@type":"WebPage","headline":"Kubelet Events","url":"http://localhost:4000/kubelet.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=9f6210f179c3696bb4f2cd09c71e75b203474f00">
+    <script src="https://code.jquery.com/jquery-3.3.0.min.js" integrity="sha256-RTQy8VOmNlT6b2PIRur37p6JEBZUE7o8wPgMvu18MC4=" crossorigin="anonymous"></script>
+    <script src="/assets/js/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+
+      <header>
+        <h1>Kubelet Events</h1>
+        <p>A short description of your site's purpose</p>
+      </header>
+
+      <div id="banner">
+        <span id="logo"></span>
+
+        <a href="https://github.com/last9/k8s-events-dictionary" class="button fork"><strong>View On GitHub</strong></a>
+        
+      </div><!-- end banner -->
+
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <h3 id="kubelet-events">Kubelet Events</h3>
+
+<p><a href="https://github.com/kubernetes/kubernetes/blob/master/pkg/kubelet/events/event.go">kubelet/events/event.go</a></p>
+
+<h3 id="container-events">Container Events</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  CreatedContainer        = "Created"
+  StartedContainer        = "Started"
+  FailedToCreateContainer = "Failed"
+  FailedToStartContainer  = "Failed"
+  KillingContainer        = "Killing"
+  PreemptContainer        = "Preempting"
+  BackOffStartContainer   = "BackOff"
+  ExceededGracePeriod     = "ExceededGracePeriod"
+</code></pre></div></div>
+
+<h3 id="pod-events">Pod Events</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  FailedToKillPod                = "FailedKillPod"
+  FailedToCreatePodContainer     = "FailedCreatePodContainer"
+  FailedToMakePodDataDirectories = "Failed"
+  NetworkNotReady                = "NetworkNotReady"
+</code></pre></div></div>
+
+<h3 id="image-events">Image Events</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  PullingImage            = "Pulling"
+  PulledImage             = "Pulled"
+  FailedToPullImage       = "Failed"
+  FailedToInspectImage    = "InspectFailed"
+  ErrImageNeverPullPolicy = "ErrImageNeverPull"
+  BackOffPullImage        = "BackOff"
+</code></pre></div></div>
+
+<h3 id="kubelet-events-1">Kubelet Events</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  NodeReady                            = "NodeReady"
+  NodeNotReady                         = "NodeNotReady"
+  NodeSchedulable                      = "NodeSchedulable"
+  NodeNotSchedulable                   = "NodeNotSchedulable"
+  StartingKubelet                      = "Starting"
+  KubeletSetupFailed                   = "KubeletSetupFailed"
+  FailedAttachVolume                   = "FailedAttachVolume"
+  FailedMountVolume                    = "FailedMount"
+  VolumeResizeFailed                   = "VolumeResizeFailed"
+  VolumeResizeSuccess                  = "VolumeResizeSuccessful"
+  FileSystemResizeFailed               = "FileSystemResizeFailed"
+  FileSystemResizeSuccess              = "FileSystemResizeSuccessful"
+  FailedMapVolume                      = "FailedMapVolume"
+  WarnAlreadyMountedVolume             = "AlreadyMountedVolume"
+  SuccessfulAttachVolume               = "SuccessfulAttachVolume"
+  SuccessfulMountVolume                = "SuccessfulMountVolume"
+  NodeRebooted                         = "Rebooted"
+  ContainerGCFailed                    = "ContainerGCFailed"
+  ImageGCFailed                        = "ImageGCFailed"
+  FailedNodeAllocatableEnforcement     = "FailedNodeAllocatableEnforcement"
+  SuccessfulNodeAllocatableEnforcement = "NodeAllocatableEnforced"
+  SandboxChanged                       = "SandboxChanged"
+  FailedCreatePodSandBox               = "FailedCreatePodSandBox"
+  FailedStatusPodSandBox               = "FailedPodSandBoxStatus"
+  FailedMountOnFilesystemMismatch      = "FailedMountOnFilesystemMismatch"
+</code></pre></div></div>
+
+<h3 id="image-manager-events">Image manager Events</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  InvalidDiskCapacity = "InvalidDiskCapacity"
+  FreeDiskSpaceFailed = "FreeDiskSpaceFailed"
+</code></pre></div></div>
+
+<h3 id="probe-events">Probe Events</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  ContainerUnhealthy    = "Unhealthy"
+  ContainerProbeWarning = "ProbeWarning"
+</code></pre></div></div>
+
+<h3 id="pod-worker-events">Pod worker Events</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  FailedSync = "FailedSync"
+</code></pre></div></div>
+
+<h3 id="config-events">Config Events</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  FailedValidation = "FailedValidation"
+</code></pre></div></div>
+
+<h3 id="lifecycle-hooks">Lifecycle hooks</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  FailedPostStartHook = "FailedPostStartHook"
+  FailedPreStopHook   = "FailedPreStopHook"
+</code></pre></div></div>
+
+
+      </section>
+      <footer>
+        
+          <p>Project maintained by <a href="https://github.com/last9">last9</a></p>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/mattgraham">mattgraham</a></small></p>
+      </footer>
+    </div>
+
+    
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'Your Google Analytics tracking ID', 'auto');
+        ga('send', 'pageview');
+      </script>
+    
+  </body>
+</html>
